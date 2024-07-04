@@ -60,14 +60,17 @@ services:
 ###< symfony/mercure-bundle ###
   ###> doctrine/doctrine-bundle ###
   database:
-    container_name: dbwarlist
     image: postgres:${POSTGRES_VERSION:-16}-alpine
     environment:
+      POSTGRES_DB: ${POSTGRES_DB:-warlist}
       # You should definitely change the password in production
-      POSTGRES_PASSWORD: qwerty
-      POSTGRES_USER: root
-    ports:
-      - "3311:3306"
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-!ChangeMe!}
+      POSTGRES_USER: ${POSTGRES_USER:-app}
+    healthcheck:
+      test: ["CMD", "pg_isready", "-d", "${POSTGRES_DB:-app}", "-U", "${POSTGRES_USER:-app}"]
+      timeout: 5s
+      retries: 5
+      start_period: 60s
     volumes:
       - database_data:/var/lib/postgresql/data:rw
     networks:

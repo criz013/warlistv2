@@ -8,8 +8,16 @@
 /vendor/
 .idea/
 .DS_Store
+.buildpath
+.project
+.settings/
+keycloak_rest_call
+.eclipse-pmd
+.vscode
 ###< symfony/framework-bundle ###
 ###> symfony/asset-mapper ###
 /public/assets/
 /assets/vendor/
 ###< symfony/asset-mapper ###
+/node_modules/
+/public/build/

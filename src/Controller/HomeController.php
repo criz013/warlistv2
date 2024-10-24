@@ -18,6 +18,11 @@ class HomeController extends AbstractController
     {
         return  $this->render('warlist/datatableList.html.twig');
     }
+    #[Route('connection', name: 'connection')]
+    public function con()
+    {
+        return  $this->render('register/login.html.twig');
+    }
 }
      /*  $liste = {
            headings: [

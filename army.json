@@ -1,0 +1,468 @@
+{
+  "name": "",
+  "characteristics": {"movement": "","endurance": "","save": "","wounds": "","command": "","control": "","invulnerable_save": "",},
+  "weapon": [{"name": "","weapon_keywork":"","range": "","attacks": "","skill": "","strength": "","armor_penetration": "","damage": ""}],
+  "abilities": {"base": [],"faction": ""},
+  "special_rules": [{"name": "","description": ""}],
+  "equipment": [{}],
+  "unit_composition": [{"name": "","type": ""}],
+  "equipment_options": [{"option": "","choices": []},
+  "independent_nation_rule": "",
+  "keywords": [],
+  "faction_keywords": []
+}
+
+{
+  "name": "Équipe d'Attaque",
+  "characteristics": {
+    "movement": "6\"",
+    "endurance": "3",
+    "save": "4+",
+    "wounds": "1",
+    "command": "7+",
+    "control": "2",
+    "invulnerable_save": ""
+  },
+  "weapon": [
+    {
+      "name": "Carabine à impulsions",
+      "weapon_keyword": "",
+      "range": "20\"",
+      "attacks": "2",
+      "skill": "4+",
+      "strength": "5",
+      "armor_penetration": "0",
+      "damage": "1"
+    },
+    {
+      "name": "Pistolet à impulsions",
+      "weapon_keyword": "pistolet",
+      "range": "12\"",
+      "attacks": "1",
+      "skill": "4+",
+      "strength": "5",
+      "armor_penetration": "0",
+      "damage": "1"
+    },
+    {
+      "name": "Fusil à impulsions",
+      "weapon_keyword": "tir rapide 1",
+      "range": "30\"",
+      "attacks": "1",
+      "skill": "4+",
+      "strength": "5",
+      "armor_penetration": "0",
+      "damage": "1"
+    },
+    {
+      "name": "Tourelle d'appui",
+      "weapon_keyword": "tir indirect, jumelé",
+      "range": "30\"",
+      "attacks": "2",
+      "skill": "5+",
+      "strength": "5",
+      "armor_penetration": "0",
+      "damage": "1"
+    },
+    {
+      "name": "Arme de corps à corps",
+      "weapon_keyword": "",
+      "range": "Mêlée",
+      "attacks": "1",
+      "skill": "5+",
+      "strength": "3",
+      "armor_penetration": "0",
+      "damage": "1"
+    }
+  ],
+  "abilities": {
+    "base": [],
+    "faction": "Pour le Bien Suprême"
+  },
+  "special_rules": [
+    {
+      "name": "Salve de Suppression",
+      "description": "À votre phase de Tir, après que cette unité a tiré, choisissez 1 unité INFANTERIE ennemie touchée par une ou plusieurs de ces attaques. Jusqu’au début de votre prochain tour, tant que l’unité ayant cette aptitude est sur le champ de bataille, cette unité ennemie est pilonnée. Tant qu’une unité est pilonnée, à chaque attaque d’une figurine de l’unité, soustrayez 1 au jet de touche."
+    },
+    {
+      "name": "Tourelle d'Appui DS8",
+      "description": "À votre phase de Mouvement, si cette unité reste immobile, jusqu’au début de votre prochain tour, sa figurine de Shas'ui est équipée de l’arme tourelle d’appui."
+    }
+  ],
+  "equipment": [
+    {
+      "option": "Le Shas'ui Guerrier de Feu peut être équipé de jusqu’à 2 des choix suivants, en plusieurs exemplaires si désiré:",
+      "choices": [
+        "1 drone gardien",
+        "1 drone armé",
+        "1 drone de marquage",
+        "1 drone bouclier"
+      ]
+    },
+    {
+      "option": "Chaque figurine de Guerrier de Feu (n’importe quel nombre) peut remplacer son fusil à impulsions par 1 carabine à impulsions.",
+      "choices": []
+    }
+  ],
+  "unit_composition": [
+    {
+      "name": "1 Shas'ui Guerrier de Feu",
+      "type": "1 Shas'ui Guerrier de Feu"
+    },
+    {
+      "name": "9 Guerriers de Feu",
+      "type": "9 Guerriers de Feu"
+    }
+  ],
+  "keywords": ["Infanterie", "Ligne", "Grenades", "Désignateur Laser", "Guerrier de Feu", "Équipe d'Attaque"],
+  "faction_keywords": ["Empire T'au"]
+}
+{
+  "name": "Commandant en Exo-armure Coldstar",
+  "characteristics": {
+    "movement": "12\"",
+    "endurance": "5",
+    "save": "3+",
+    "wounds": "6",
+    "command": "7+",
+    "control": "2",
+    "invulnerable_save": ""
+  },
+  "weapon": [
+    {
+      "name": "Lanceur de charges à dispersion",
+      "weapon_keyword": "",
+      "range": "24\"",
+      "attacks": "D6",
+      "skill": "3+",
+      "strength": "3",
+      "armor_penetration": "0",
+      "damage": "1"
+    },
+    {
+      "name": "Canon à induction",
+      "weapon_keyword": "",
+      "range": "18\"",
+      "attacks": "4",
+      "skill": "3+",
+      "strength": "5",
+      "armor_penetration": "0",
+      "damage": "1"
+    },
+    {
+      "name": "Cyclo-éclateur à ions – standard",
+      "weapon_keyword": "",
+      "range": "18\"",
+      "attacks": "3",
+      "skill": "3+",
+      "strength": "7",
+      "armor_penetration": "-1",
+      "damage": "1"
+    },
+    {
+      "name": "Cyclo-éclateur à ions – surcharge [à risque]",
+      "weapon_keyword": "",
+      "range": "18\"",
+      "attacks": "3",
+      "skill": "3+",
+      "strength": "8",
+      "armor_penetration": "-2",
+      "damage": "2"
+    },
+    {
+      "name": "Éclateur à fusion [fusion 2]",
+      "weapon_keyword": "",
+      "range": "12\"",
+      "attacks": "1",
+      "skill": "3+",
+      "strength": "9",
+      "armor_penetration": "-4",
+      "damage": "D6"
+    },
+    {
+      "name": "Canon à induction surcadencé",
+      "weapon_keyword": "",
+      "range": "18\"",
+      "attacks": "8",
+      "skill": "3+",
+      "strength": "5",
+      "armor_penetration": "0",
+      "damage": "1"
+    },
+    {
+      "name": "Nacelle de missiles",
+      "weapon_keyword": "",
+      "range": "30\"",
+      "attacks": "2",
+      "skill": "3+",
+      "strength": "7",
+      "armor_penetration": "-1",
+      "damage": "2"
+    },
+    {
+      "name": "Fusil à plasma froid",
+      "weapon_keyword": "",
+      "range": "18\"",
+      "attacks": "1",
+      "skill": "3+",
+      "strength": "8",
+      "armor_penetration": "-3",
+      "damage": "3"
+    },
+    {
+      "name": "Lance-flammes l’eau [ignore le couvert, torrent]",
+      "weapon_keyword": "",
+      "range": "12\"",
+      "attacks": "D6",
+      "skill": "N/A",
+      "strength": "4",
+      "armor_penetration": "0",
+      "damage": "1"
+    },
+    {
+      "name": "Poings d’exo-armure",
+      "weapon_keyword": "",
+      "range": "Mêlée",
+      "attacks": "3",
+      "skill": "4+",
+      "strength": "5",
+      "armor_penetration": "0",
+      "damage": "1"
+    }
+  ],
+  "abilities": {
+    "base": ["Frappe en Profondeur", "Meneur"],
+    "faction": "Pour le Bien Suprême"
+  },
+  "special_rules": [
+    {
+      "name": "Commandant Coldstar",
+      "description": "Tant que cette figurine mène une unité, les figurines de l’unité ont une caractéristique de Mouvement de 12\" et les armes de tir dont les figurines de l’unité sont équipées ont l’aptitude [ASSAUT]."
+    }
+  ],
+  "equipment": [
+    {
+      "name": "Système d’Appui d’Exo-armure",
+      "description": "L’unité du porteur est éligible pour tirer à un tour où elle a Battu en Retraite, mais en ce cas, seules les figurines dotées de cet équipement peuvent faire des attaques de tir."
+    },
+    {
+      "name": "Générateur de Bouclier",
+      "description": "Le porteur a une sauvegarde invulnérable de 4+."
+    },
+    {
+      "name": "Système d’Appui d’Arme",
+      "description": "À chaque attaque de tir du porteur, vous pouvez ignorer certains ou tous les modificateurs au jet de touche."
+    }
+  ],
+  "unit_composition": [
+    {
+      "name": "Commandant en Exo-armure Coldstar",
+      "type": "1 Commandant en Exo-armure Coldstar"
+    }
+  ],
+  "keywords": ["Véhicule", "Marcheur", "Vol", "Personnage", "Exo-armure", "Commandant en Exo-armure Coldstar"],
+  "faction_keywords": ["Empire T'au"]
+}
+{
+  "name": "Commandant Farsight",
+  "characteristics": {
+    "movement": "10\"",
+    "endurance": "5",
+    "save": "2+",
+    "wounds": "8",
+    "command": "6+",
+    "control": "2",
+    "invulnerable_save": "4+"
+  },
+  "weapon": [
+    {
+      "name": "Fusil à plasma froid à haute intensité",
+      "weapon_keyword": "",
+      "range": "24\"",
+      "attacks": "2",
+      "skill": "2+",
+      "strength": "8",
+      "armor_penetration": "-3",
+      "damage": "3"
+    },
+    {
+      "name": "Lame de l'Aube – frappe",
+      "weapon_keyword": "",
+      "range": "Mêlée",
+      "attacks": "4",
+      "skill": "2+",
+      "strength": "10",
+      "armor_penetration": "-2",
+      "damage": "3"
+    },
+    {
+      "name": "Lame de l'Aube – balayage",
+      "weapon_keyword": "",
+      "range": "Mêlée",
+      "attacks": "8",
+      "skill": "2+",
+      "strength": "6",
+      "armor_penetration": "-1",
+      "damage": "1"
+    }
+  ],
+  "abilities": {
+    "base": ["Frappe en Profondeur", "Meneur"],
+    "faction": "Pour le Bien Suprême"
+  },
+  "special_rules": [
+    {
+      "name": "Voie de la Courte Lame",
+      "description": "Tant que cette figurine mène une unité, à chaque attaque d’une figurine de cette unité qui cible une unité ennemie à 9\" ou moins, ajoutez 1 au jet de Blessure."
+    },
+    {
+      "name": "Leçons de Pureté",
+      "description": "Une fois par round de bataille, vous pouvez cibler l’unité de cette figurine avec un Stratagème pour OPC, même si vous avez déjà ciblé une autre unité avec ce Stratagème à cette phase."
+    }
+  ],
+  "equipment": [
+    {
+      "name": "Fusil à plasma froid à haute intensité",
+      "description": ""
+    },
+    {
+      "name": "Lame de l'Aube",
+      "description": ""
+    }
+  ],
+  "unit_composition": [
+    {
+      "name": "Commandant Farsight",
+      "type": "Héros Épique"
+    }
+  ],
+  "keywords": ["Héros Épique", "Exo-armure", "Commandant Farsight"],
+  "faction_keywords": ["Empire T'au"]
+}
+{
+  "name": "Exo-armures Broadside",
+  "characteristics": {
+    "movement": "5\"",
+    "endurance": "6",
+    "save": "2+",
+    "wounds": "8",
+    "command": "7+",
+    "control": "2",
+    "invulnerable_save": ""
+  },
+  "weapon": [
+    {
+      "name": "Lourd fusil-rail",
+      "weapon_keyword": "blessures dévastatrices, lourd",
+      "range": "60\"",
+      "attacks": "2",
+      "skill": "4+",
+      "strength": "12",
+      "armor_penetration": "-4",
+      "damage": "D6+1"
+    },
+    {
+      "name": "Nacelles de missiles à haut rendement",
+      "weapon_keyword": "jumelé",
+      "range": "30\"",
+      "attacks": "6",
+      "skill": "4+",
+      "strength": "7",
+      "armor_penetration": "-1",
+      "damage": "2"
+    },
+    {
+      "name": "Missile Seeker",
+      "weapon_keyword": "tir unique",
+      "range": "48\"",
+      "attacks": "1",
+      "skill": "4+",
+      "strength": "14",
+      "armor_penetration": "-3",
+      "damage": "D6+1"
+    },
+    {
+      "name": "Fusil à plasma froid jumelé",
+      "weapon_keyword": "jumelé",
+      "range": "18\"",
+      "attacks": "1",
+      "skill": "4+",
+      "strength": "8",
+      "armor_penetration": "-3",
+      "damage": "3"
+    },
+    {
+      "name": "Système de missiles autodirecteurs jumelé",
+      "weapon_keyword": "tir indirect, jumelé",
+      "range": "30\"",
+      "attacks": "4",
+      "skill": "4+",
+      "strength": "5",
+      "armor_penetration": "0",
+      "damage": "1"
+    },
+    {
+      "name": "Masse écrasante",
+      "weapon_keyword": "",
+      "range": "Mêlée",
+      "attacks": "3",
+      "skill": "5+",
+      "strength": "6",
+      "armor_penetration": "0",
+      "damage": "1"
+    }
+  ],
+  "abilities": {
+    "base": [],
+    "faction": "Pour le Bien Suprême"
+  },
+  "special_rules": [
+    {
+      "name": "Blindage Avancé",
+      "description": "Les figurines de cette unité ont l’aptitude Insensible à la Douleur 4+ contre blessures mortelles."
+    }
+  ],
+  "equipment": [
+    {
+      "name": "Système d’Appui d’Arme",
+      "description": "À chaque attaque de tir du porteur, vous pouvez ignorer certains ou tous les modificateurs au jet de touche."
+    }
+  ],
+  "unit_composition": [
+    {
+      "name": "1 Shas'vre Broadside",
+      "type": "1 Shas'vre Broadside"
+    },
+    {
+      "name": "0-2 Shas'ui Broadside",
+      "type": "0-2 Shas'ui Broadside"
+    }
+  ],
+  "equipment_options": [
+    {
+      "option": "Chaque figurine (n’importe quel nombre) peut remplacer son fusil-rail lourd par 1 nacelles de missiles à haut rendement.",
+      "choices": []
+    },
+    {
+      "option": "Chaque figurine (n’importe quel nombre) peut être équipée de jusqu’à 2 des choix suivants, en un seul exemplaire maximum:",
+      "choices": [
+        "1 Missile Seeker",
+        "1 fusil à plasma froid jumelé",
+        "1 système de missiles autodirecteurs jumelé",
+        "1 système d’appui d’arme"
+      ]
+    },
+    {
+      "option": "Chaque figurine (n’importe quel nombre) peut être équipée de jusqu’à 2 des choix suivants, en plusieurs exemplaires si désiré:",
+      "choices": [
+        "1 drone armé",
+        "1 drone de marquage",
+        "1 missile drone",
+        "1 drone bouclier"
+      ]
+    }
+  ],
+  "independent_nation_rule": "",
+  "keywords": ["Véhicule", "Marcheur", "Exo-armure", "Broadside"],
+  "faction_keywords": ["Empire T'au"]
+}

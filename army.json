@@ -1,3 +1,4 @@
+/*
 {
   "name": "",
   "characteristics": {"movement": "","endurance": "","save": "","wounds": "","command": "","control": "","invulnerable_save": "",},
@@ -11,8 +12,10 @@
   "keywords": [],
   "faction_keywords": []
 }
+*/
 
-{
+[
+  {
   "name": "Équipe d'Attaque",
   "characteristics": {
     "movement": "6\"",
@@ -116,8 +119,8 @@
   ],
   "keywords": ["Infanterie", "Ligne", "Grenades", "Désignateur Laser", "Guerrier de Feu", "Équipe d'Attaque"],
   "faction_keywords": ["Empire T'au"]
-}
-{
+},
+  {
   "name": "Commandant en Exo-armure Coldstar",
   "characteristics": {
     "movement": "12\"",
@@ -262,8 +265,8 @@
   ],
   "keywords": ["Véhicule", "Marcheur", "Vol", "Personnage", "Exo-armure", "Commandant en Exo-armure Coldstar"],
   "faction_keywords": ["Empire T'au"]
-}
-{
+},
+  {
   "name": "Commandant Farsight",
   "characteristics": {
     "movement": "10\"",
@@ -338,8 +341,8 @@
   ],
   "keywords": ["Héros Épique", "Exo-armure", "Commandant Farsight"],
   "faction_keywords": ["Empire T'au"]
-}
-{
+},
+  {
   "name": "Exo-armures Broadside",
   "characteristics": {
     "movement": "5\"",
@@ -464,5 +467,7 @@
   ],
   "independent_nation_rule": "",
   "keywords": ["Véhicule", "Marcheur", "Exo-armure", "Broadside"],
-  "faction_keywords": ["Empire T'au"]
+  "faction_keywords": ["Empire T'au"],
+  "point" : {}
 }
+]

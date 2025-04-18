@@ -1,14 +1,17 @@
 {
-    "name": "symfony/skeleton",
+    "name": "symfony/warlist",
     "type": "project",
     "license": "MIT",
-    "description": "A minimal Symfony project recommended to create bare bones applications",
+    "description": "création de liste d'armée",
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
         "php": ">=8.3.7",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "datatables.net/datatables.net-autofill-dt": "^2.7",
+        "datatables.net/datatables.net-searchbuilder-dt": "^1.8",
+        "datatables.net/datatables.net-select-dt": "^3.0",
         "doctrine/dbal": "^3",
         "doctrine/doctrine-bundle": "^2.12",
         "doctrine/doctrine-migrations-bundle": "^3.3",
@@ -26,7 +29,7 @@
         "symfony/uid": "7.1.*",
         "symfony/ux-turbo": "^2.18",
         "symfony/yaml": "7.1.*",
-        "symfonycasts/tailwind-bundle": "^0.5.3"
+        "symfonycasts/tailwind-bundle": "^0.10.0"
     },
     "config": {
         "allow-plugins": {
@@ -75,7 +78,7 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "7.1.*",
+            "require": "7.*",
             "docker": true
         }
     },

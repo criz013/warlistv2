@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Attribute\Route;
 
 #[Route('/')]
@@ -16,7 +17,70 @@ class HomeController extends AbstractController
     #[Route('list', name: 'home_list')]
     public function datatable()
     {
-        return  $this->render('warlist/datatableList.html.twig');
+
+        // Remplacez ceci par votre logique pour récupérer les données
+        $json = '{
+            "name": "Commandant en Exo-armure Crisis",
+            "movement": 10,
+            "toughness": 5,
+            "save": "3+",
+            "wounds": 5,
+            "leadership": "7+",
+            "objective_control": 2,
+            "invulnerable_save": "4+",
+            "ranged_weapons": [
+                {
+                    "name": "Lanceur de charges à dispersion",
+                    "range": "24\"",
+                    "attacks": "D6",
+                    "ballistic_skill": "3+",
+                    "strength": 3,
+                    "armor_penetration": 0,
+                    "damage": 1,
+                    "keywords": ["Déflagration", "Tir Indirect"]
+                }
+                // ... autres armes ici
+            ],
+            "melee_weapons": [
+                {
+                    "name": "Poings d’exo-armure",
+                    "range": "Mêlée",
+                    "attacks": "3",
+                    "weapon_skill": "4+",
+                    "strength": 5,
+                    "armor_penetration": 0,
+                    "damage": 1
+                }
+            ],
+            "abilities": {
+                "base": ["Frappe en Profondeur", "Meneur"],
+                "faction": "Pour le Bien Suprême",
+                "special": [
+                    {
+                        "name": "Commandant Crisis",
+                        "effect": "Tant que cette figurine mène une unité, à chaque attaque de tir d’une figurine de cette unité, relancez tout jet de Touche de 1."
+                    }
+                ],
+                "equipment": [
+                    {
+                        "name": "Système d’Appui d’Exo-armure",
+                        "effect": "L’unité du porteur est éligible pour tirer à un tour où elle a Battu en Retraite, mais ne peut cibler que les unités à 6\"."
+                    }
+                ]
+            },
+            "unit_composition": [
+                {
+                    "name": "Commandant en Exo-armure Crisis",
+                    "type": "Personnage"
+                }
+            ],
+            "leader_rule": "Cette figurine peut être attachée à une unité d’Exo-armures Crisis.",
+            "equipment_options": [],
+            "keywords": ["Personnage", "Exo-armure"],
+            "faction_keywords": ["Empire T\'au"]
+        }';
+
+        return  $this->render('warlist/datatableArmyList.html.twig', ['json' => $json]);
     }
     #[Route('connection', name: 'connection')]
     public function con()
@@ -24,172 +88,4 @@ class HomeController extends AbstractController
         return  $this->render('register/login.html.twig');
     }
 }
-     /*  $liste = {
-           headings: [
-      {
-          key: "userId",
-        value: "User ID"
-      },
-      {
-          key: "firstName",
-        value: "Firstname"
-      },
-      {
-          key: "lastName",
-        value: "Lastname"
-      },
-      {
-          key: "emailAddress",
-        value: "Email"
-      },
-      {
-          key: "gender",
-        value: "Gender"
-      },
-      {
-          key: "phoneNumber",
-        value: "Phone"
-      }
-    ],
-        };
 
-    users: [
-      {
-          selected: false,
-        userId: 1,
-        firstName: "Cort",
-        lastName: "Tosh",
-        emailAddress: "ctosh0@github.com",
-        gender: "Male",
-        phoneNumber: "327-626-5542"
-      },
-      {
-          selected: false,
-        userId: 2,
-        firstName: "Brianne",
-        lastName: "Dzeniskevich",
-        emailAddress: "bdzeniskevich1@hostgator.com",
-        gender: "Female",
-        phoneNumber: "144-190-8956"
-      },
-      {
-          selected: false,
-        userId: 3,
-        firstName: "Isadore",
-        lastName: "Botler",
-        emailAddress: "ibotler2@gmpg.org",
-        gender: "Male",
-        phoneNumber: "350-937-0792"
-      },
-      {
-          selected: false,
-        userId: 4,
-        firstName: "Janaya",
-        lastName: "Klosges",
-        emailAddress: "jklosges3@amazon.de",
-        gender: "Female",
-        phoneNumber: "502-438-7799"
-      },
-      {
-          selected: false,
-        userId: 5,
-        firstName: "Freddi",
-        lastName: "Di Claudio",
-        emailAddress: "fdiclaudio4@phoca.cz",
-        gender: "Female",
-        phoneNumber: "265-448-9627"
-      },
-      {
-          selected: false,
-        userId: 6,
-        firstName: "Oliy",
-        lastName: "Mairs",
-        emailAddress: "omairs5@fda.gov",
-        gender: "Female",
-        phoneNumber: "221-516-2295"
-      },
-      {
-          selected: false,
-        userId: 7,
-        firstName: "Tabb",
-        lastName: "Wiseman",
-        emailAddress: "twiseman6@friendfeed.com",
-        gender: "Male",
-        phoneNumber: "171-817-5020"
-      },
-      {
-          selected: false,
-        userId: 8,
-        firstName: "Joela",
-        lastName: "Betteriss",
-        emailAddress: "jbetteriss7@msu.edu",
-        gender: "Female",
-        phoneNumber: "481-100-9345"
-      },
-      {
-          selected: false,
-        userId: 9,
-        firstName: "Alistair",
-        lastName: "Vasyagin",
-        emailAddress: "avasyagin8@gnu.org",
-        gender: "Male",
-        phoneNumber: "520-669-8364"
-      },
-      {
-          selected: false,
-        userId: 10,
-        firstName: "Nealon",
-        lastName: "Ratray",
-        emailAddress: "nratray9@typepad.com",
-        gender: "Male",
-        phoneNumber: "993-654-9793"
-      },
-      {
-          selected: false,
-        userId: 11,
-        firstName: "Annissa",
-        lastName: "Kissick",
-        emailAddress: "akissicka@deliciousdays.com",
-        gender: "Female",
-        phoneNumber: "283-425-2705"
-      },
-      {
-          selected: false,
-        userId: 12,
-        firstName: "Nissie",
-        lastName: "Sidnell",
-        emailAddress: "nsidnellb@freewebs.com",
-        gender: "Female",
-        phoneNumber: "754-391-3116"
-      },
-      {
-          selected: false,
-        userId: 13,
-        firstName: "Madalena",
-        lastName: "Fouch",
-        emailAddress: "mfouchc@mozilla.org",
-        gender: "Female",
-        phoneNumber: "584-300-9004"
-      },
-      {
-          selected: false,
-        userId: 14,
-        firstName: "Rozina",
-        lastName: "Atkins",
-        emailAddress: "ratkinsd@japanpost.jp",
-        gender: "Female",
-        phoneNumber: "792-856-0845"
-      },
-      {
-          selected: false,
-        userId: 15,
-        firstName: "Lorelle",
-        lastName: "Sandcroft",
-        emailAddress: "lsandcrofte@google.nl",
-        gender: "Female",
-        phoneNumber: "882-911-7241"
-      }
-    ];
-        return  $this->render('warlist/datatableList.html.twig');
-    }
-}*/

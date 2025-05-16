@@ -4,10 +4,7 @@
         <meta charset="UTF-8">
         <title>{% block title %}Warlist !{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-            <link rel="stylesheet" href="{{asset('styles/app.css')}}">
-        {% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}{{ importmap('app') }}{% endblock %}
     </head>
     <body data-turbo="false">
             {{ include('_parts/_menu.html.twig') }}
@@ -15,7 +12,7 @@
                 {% block body %}{% endblock %}
             </div>
     </body>
-    <footer class="sticky bottom-0 bg-gray-100 py-8 sm:py-12">
+    <footer class="bottom-0 bg-gray-100 py-8 sm:py-12">
         {{ include('_parts/_footer.html.twig') }}
     </footer>
 </html>

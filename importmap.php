@@ -25,4 +25,10 @@ return [
     '@hotwired/turbo' => [
         'version' => '7.3.0',
     ],
+    'datatables.net' => [
+        'version' => '2.3.1',
+    ],
+    'jquery' => [
+        'version' => '3.7.1',
+    ],
 ];

@@ -1,3 +1,8 @@
+<style>
+    .menu-item.active {
+        @apply bg-gray-900 text-white;
+    }
+</style>
 <div class="min-h-full">
   <nav class="bg-gray-800">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -9,7 +14,7 @@
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a href="{{ path('home_home') }}" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Dashboard</a>
+              <a href="{{ path('home_home') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Dashboard</a>
               <a href="{{ path('home_list') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Liste</a>
               <a href="{{ path('connection') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm text-2xs font-medium">connections</a>
             </div>
@@ -116,7 +121,7 @@
 
 {% block javascripts %}
   <script>
-    (function() {
+   /* (function() {
       //Dropdown navbar
       const navToggle = document.getElementById('user-menu-button');
       const navContent = document.getElementById('user-dropdown');
@@ -128,7 +133,17 @@
         }
       });
 
-    })();
+    })();*/
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuItems = document.querySelectorAll('.menu-item');
 
+        menuItems.forEach(item => {
+            item.addEventListener('click', function(event) {
+                event.preventDefault();
+                menuItems.forEach(item => item.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    });
   </script>
 {% endblock %}

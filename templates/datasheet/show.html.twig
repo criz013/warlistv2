@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Datasheet{% endblock %}
+
+{% block body %}
+    <h1>Datasheet</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ datasheet.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ datasheet.name }}</td>
+            </tr>
+            <tr>
+                <th>Val1</th>
+                <td>{{ datasheet.val1 ? datasheet.val1|json_encode : '' }}</td>
+            </tr>
+            <tr>
+                <th>Point</th>
+                <td>{{ datasheet.point ? datasheet.point|json_encode : '' }}</td>
+            </tr>
+            <tr>
+                <th>Val2</th>
+                <td>{{ datasheet.val2 ? datasheet.val2|json_encode : '' }}</td>
+            </tr>
+            <tr>
+                <th>Val3</th>
+                <td>{{ datasheet.val3 ? datasheet.val3|json_encode : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_datasheet_index') }}">back to list</a>
+
+    <a href="{{ path('app_datasheet_edit', {'id': datasheet.id}) }}">edit</a>
+
+    {{ include('datasheet/_delete_form.html.twig') }}
+{% endblock %}

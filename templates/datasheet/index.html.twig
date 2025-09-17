@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Datasheet index{% endblock %}
+
+{% block body %}
+    <h1>Datasheet index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Val1</th>
+                <th>Point</th>
+                <th>Val2</th>
+                <th>Val3</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for datasheet in datasheets %}
+            <tr>
+                <td>{{ datasheet.id }}</td>
+                <td>{{ datasheet.name }}</td>
+                <td>{{ datasheet.val1 ? datasheet.val1|json_encode : '' }}</td>
+                <td>{{ datasheet.point ? datasheet.point|json_encode : '' }}</td>
+                <td>{{ datasheet.val2 ? datasheet.val2|json_encode : '' }}</td>
+                <td>{{ datasheet.val3 ? datasheet.val3|json_encode : '' }}</td>
+                <td>
+                    <a href="{{ path('app_datasheet_show', {'id': datasheet.id}) }}">show</a>
+                    <a href="{{ path('app_datasheet_edit', {'id': datasheet.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_datasheet_new') }}">Create new</a>
+{% endblock %}

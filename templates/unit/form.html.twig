@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+{% block title %}unit{% endblock %}
+
+{% import "unit/_collection_macro.html.twig" as forms %}
+
+{% block body %}
+    <div class="max-w-5xl mx-auto py-8">
+        <h1 class="text-3xl font-bold mb-8 text-center">Créer / Éditer une Unité</h1>
+
+        {{ form_start(form) }}
+        {{ form_row(form.name) }}
+        {{ form_row(form.caracteristiques) }}
+
+        {{ forms.collection_widget(form.weapons, 'Armes') }}
+        {{ form_row(form.aptitude) }}
+        {{ forms.collection_widget(form.abilities, 'Capacités') }}
+        {{ forms.collection_widget(form.equipment, 'Équipement') }}
+        {{ forms.collection_widget(form.unit_composition, 'Composition d’unité') }}
+        {{ forms.collection_widget(form.equipment_options, 'Options d’équipement') }}
+        {{ form_row(form.leader_rule) }}
+        {{ forms.collection_widget(form.keywords, 'Mots-clés') }}
+        {{ forms.collection_widget(form.faction_keywords, 'Mots-clés de faction') }}
+
+        <div class="flex justify-center mt-8">
+            <button type="submit"
+                    class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700">
+                💾 Enregistrer
+            </button>
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Ajouter un élément
+            document.querySelectorAll(".add-item").forEach(button => {
+                button.addEventListener("click", function() {
+                    const target = this.previousElementSibling;
+                    const index = target.children.length;
+                    const prototype = target.dataset.prototype.replace(/__name__/g, index);
+                    const div = document.createElement("div");
+                    div.classList.add("border", "rounded-lg", "p-4", "mb-4", "bg-gray-50", "relative");
+                    div.innerHTML = prototype + `
+                <button type="button" class="remove-item absolute top-2 right-2 text-red-600 hover:text-red-800 font-bold">✖</button>
+            `;
+                    target.appendChild(div);
+                    div.querySelector(".remove-item").addEventListener("click", () => div.remove());
+                });
+            });
+
+            // Supprimer existants
+            document.querySelectorAll(".remove-item").forEach(button => {
+                button.addEventListener("click", function() {
+                    this.closest("div").remove();
+                });
+            });
+        });
+    </script>
+{% endblock %}

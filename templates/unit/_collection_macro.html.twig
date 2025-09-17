@@ -1,0 +1,21 @@
+{% macro collection_widget(form, label) %}
+    <div class="bg-white shadow rounded-xl p-6 mb-6">
+        <h2 class="text-xl font-semibold mb-4">{{ label }}</h2>
+        <div class="collection"
+             data-prototype="{{ form_widget(form.vars.prototype)|e('html_attr') }}">
+            {% for subform in form %}
+                <div class="border rounded-lg p-4 mb-4 bg-gray-50 relative">
+                    {{ form_row(subform) }}
+                    <button type="button" class="remove-item absolute top-2 right-2 text-red-600 hover:text-red-800 font-bold">
+                        ✖
+                    </button>
+                </div>
+            {% endfor %}
+        </div>
+        <button type="button"
+                class="add-item mt-4 px-4 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700"
+                data-target=".collection:last">
+            ➕ Ajouter
+        </button>
+    </div>
+{% endmacro %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Datasheet{% endblock %}
+
+{% block body %}
+    <h1>Create new Datasheet</h1>
+
+    {{ include('datasheet/_form.html.twig') }}
+
+    <a href="{{ path('app_datasheet_index') }}">back to list</a>
+{% endblock %}
